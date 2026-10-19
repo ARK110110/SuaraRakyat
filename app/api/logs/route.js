@@ -5,9 +5,17 @@ import { uploadToCloudinary } from '@/config/cloudinary'; // sesuaikan path konf
 
 export async function POST(req) {
   try {
-    const user = verifyAuth(req);
+    const user = verifyAuth(req); // atau jwt.verify dari header
     if (!user) {
-      return NextResponse.json({ message: 'Access token required' }, { status: 401 });
+      return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
+    }
+
+    // --- TAMBAHKAN VALIDASI ROLE TEGAS DI SINI ---
+    if (user.role !== 'petugas' && user.role !== 'admin') {
+      return NextResponse.json(
+        { message: 'Akses ditolak! Hanya petugas lapangan yang dapat menambah log progres.' },
+        { status: 403 }
+      );
     }
 
     // Mengambil data dari FormData (karena ada file upload)

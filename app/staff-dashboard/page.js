@@ -233,8 +233,10 @@ export default function StaffDashboard() {
         {/* Header */}
         <header className="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-6 shrink-0 shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#0f2942] flex items-center justify-center text-amber-400 font-bold shadow-sm">
-              SR
+            <div className="w-10 h-10 rounded-xl bg-[#0f2942] flex items-center justify-center text-white shadow-md shadow-[#0f2942]/20">
+              <svg className="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"></path>
+              </svg>
             </div>
             <div>
               <h1 className="text-base font-extrabold text-[#0f2942] tracking-tight">
