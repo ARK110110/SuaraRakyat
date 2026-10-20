@@ -580,7 +580,7 @@ export default function StaffDashboard() {
                             <img
                               src={log.attachment_url}
                               alt="Bukti Lapangan"
-                              className="mt-2 rounded-lg border border-slate-200 max-h-36 w-full object-cover"
+                              className="mt-2 rounded-lg border border-slate-200 w-full object-cover"
                             />
                           )}
                         </div>

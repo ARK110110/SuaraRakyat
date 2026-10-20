@@ -515,7 +515,7 @@ export default function PelaporDashboard() {
                     <img
                       src={selectedReport.attachment_url}
                       alt="Lampiran Pengaduan"
-                      className="rounded-xl border border-slate-200 max-h-48 w-full object-cover shadow-sm"
+                      className="rounded-xl border border-slate-200 w-full object-cover shadow-sm"
                     />
                   ) : (
                     <p className="text-xs text-slate-400 italic">
@@ -560,7 +560,7 @@ export default function PelaporDashboard() {
                             <img
                               src={log.attachment_url}
                               alt="Bukti Lapangan"
-                              className="mt-2 rounded-lg border border-slate-200 max-h-32 w-full object-cover"
+                              className="mt-2 rounded-lg border border-slate-200 w-full object-cover"
                             />
                           )}
                         </div>
